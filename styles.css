@@ -1,0 +1,41 @@
+table, tr, td {
+	border: 1px solid;
+}
+
+head {
+	font-weight: bold;
+}
+
+p {
+	font-weight: bold;
+}
+
+p1 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+a {
+	font-weight: bold;
+}
+
+body {
+	background-color: Lightgray;
+	border: 0px solid black;
+	padding: 10px;
+	color: black;
+	font-size: 25px;
+	padding-left: 50px;
+}
+
+select {
+	background-color: Lightgray;
+	font-size: 15px;
+	border: 2px solid black;
+}
+
+input {
+	background-color: Lightgray;
+	font-size: 15px;
+	border: 2px solid black;
+}
