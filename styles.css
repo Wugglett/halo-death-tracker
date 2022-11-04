@@ -1,31 +1,56 @@
-table, tr, td {
-	border: 1px solid;
+/***************************************************Tag Selector*****************************************************/
+
+body {
+	margin: 0px 0px 50px 0px;
+	position: relative;
+	background-color: lightgreen;
+	text-align: center;
 }
 
-head {
+h1 {
 	font-weight: bold;
+	margin: 20px auto 20px;
 }
 
-p {
+h2 {
 	font-weight: bold;
+	margin: 20px auto 20px;
 }
 
-p1 {
-	font-size: 20px;
+h3 {
 	font-weight: bold;
+	margin: 20px auto 20px;
 }
 
 a {
+	display: inline-block;
 	font-weight: bold;
+	padding: 5px 10px 5px 10px;
+	background-color: darkolivegreen;
+	font-family: Arial;
+	font-size: 40px;
+	text-decoration: none;
+	color: white;
 }
 
-body {
-	background-color: Lightgray;
-	border: 0px solid black;
-	padding: 10px;
-	color: black;
-	font-size: 25px;
-	padding-left: 50px;
+a:hover {
+	background-color: darkgreen;
+}
+
+table, tr, td {
+	border: 2px solid;
+	border-color: darkblue;
+	background-color: lightblue;
+	font-size: 30px;
+	font-weight: bold;
+	width: 50%;
+	margin: 0px auto 0px;
+}
+
+td {
+	padding: 30px 50px 30px 50px;
+	width: 30px;
+	text-align: left;
 }
 
 select {
@@ -39,3 +64,49 @@ input {
 	font-size: 15px;
 	border: 2px solid black;
 }
+
+/**********************************************Class Selector**********************************************************/
+
+.title {
+	font-weight: bold;
+	text-decoration: underline;
+	color: darkgreen;
+}
+
+.home {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.btn {
+	background: #187a05;
+	background-image: -webkit-linear-gradient(top, #187a05, #38b50e);
+	background-image: -moz-linear-gradient(top, #187a05, #38b50e);
+	background-image: -ms-linear-gradient(top, #187a05, #38b50e);
+	background-image: -o-linear-gradient(top, #187a05, #38b50e);
+	background-image: linear-gradient(to bottom, #187a05, #38b50e);
+	-webkit-border-radius: 60;
+	-moz-border-radius: 60;
+	border-radius: 60px;
+	-webkit-box-shadow: 0px 1px 3px #666666;
+	-moz-box-shadow: 0px 1px 3px #666666;
+	box-shadow: 0px 1px 3px #666666;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	margin: 10px auto 10px;
+  }
+  
+  .btn:hover {
+	background: #066110;
+	background-image: -webkit-linear-gradient(top, #066110, #305c04);
+	background-image: -moz-linear-gradient(top, #066110, #305c04);
+	background-image: -ms-linear-gradient(top, #066110, #305c04);
+	background-image: -o-linear-gradient(top, #066110, #305c04);
+	background-image: linear-gradient(to bottom, #066110, #305c04);
+	text-decoration: none;
+  }
+
+/***************************************************ID Selector*****************************************************/

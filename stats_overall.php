@@ -1,12 +1,14 @@
 <!DOCTYPE HTML>
 
-<link rel="stylesheet" href="styles.css">
+<head>
 
-<title> Best ofs </title>
+	<link rel="stylesheet" href="styles.css">
+	<title> Best ofs </title>
 
-<head> Overall Stats </head>
+</head>
 
 <body>
+	<h1 class="title">Overall Stats</h1>
 <?php
 
 	$mysqli = new mysqli("localhost", "root", "", "halo");
@@ -16,9 +18,7 @@
 	$res = $stmt->get_result();
 	$row = $res->fetch_row();
 	
-	echo("<p> Highest Deaths: Game </p>"."<table><tr><td>".$row[0]."</td><td>".$row[1]."</td></tr></table>");
-	
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	echo("<h2> Highest Deaths: Game </h2>"."<table><tr><td>".$row[0]."</td><td>".$row[1]."</td></tr></table>");
 	
 	$stmt = $mysqli->prepare("SELECT Missions.name, Missions.total_deaths, Games.name FROM Missions 
 							INNER JOIN Games ON Missions.game_id = Games.id
@@ -27,20 +27,16 @@
 	$res = $stmt->get_result();
 	$row = $res->fetch_row();
 	
-	echo("<p> Highest Deaths: Mission </p>"."<table><tr><td>".$row[2]."</td><td>".$row[0]."</td><td>".$row[1]."</td></tr></table>");
-	
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	echo("<h2> Highest Deaths: Mission </h2>"."<table><tr><td>".$row[2]."</td><td>".$row[0]."</td><td>".$row[1]."</td></tr></table>");
 	
 	$stmt = $mysqli->prepare("SELECT name, deaths FROM Bois WHERE deaths = (SELECT MAX(deaths) FROM Bois)");
 	$stmt->execute();
 	$res = $stmt->get_result();
 	$row = $res->fetch_row();
 	
-	echo("<p> Highest Deaths: Player </p>"."<table><tr><td>".$row[0]."</td><td>".$row[1]."</td></tr></table>");
+	echo("<h2> Highest Deaths: Player </h2>"."<table><tr><td>".$row[0]."</td><td>".$row[1]."</td></tr></table>");
 	
-	////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	echo("<p> Average Deaths per Game: </p><table>");
+	echo("<h2> Average Deaths per Game: </h2><table>");
 	for($i = 4; $i < 10; $i++){
 		for($j = 1; $j < 5; $j++){
 			$stmt = $mysqli->prepare("SELECT AVG(Mission_Deaths.deaths), Bois.name, Games.name FROM Mission_Deaths 
@@ -59,7 +55,7 @@
 	echo("</table>");
 	
 	
-	echo('</table>'.'<p><a href="./index.php">Home</a></p>');
+	echo('</table>'.'<a class="home" href="./index.php">Home</a>');
 
 ?>
 </body>
